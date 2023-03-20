@@ -37,7 +37,7 @@ document.getElementById("rectangle-btn").addEventListener("click",function(e){
     const rectangleFormulaElement=document.getElementById("rectangle-formula")
     const rectangleArea=parseFloat(rectangleFormulaElement.innerText)
     rectangleFormulaElement.innerText=rectangleAreaCalculate
-
+    
     const contentTitle=document.getElementById("rectangle").innerText
     const textAreaElement=document.getElementById("container")
 const tr=document.createElement("tr");
@@ -48,4 +48,5 @@ tr.innerHTML=`
 
 `
 textAreaElement.appendChild(tr)
+    
 })
