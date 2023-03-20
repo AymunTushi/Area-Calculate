@@ -1,6 +1,8 @@
 
 
 let serial=0
+
+//triangle area calculate
 document.getElementById("triangle-btn").addEventListener("click",function(e){
     serial=serial+1
 const triangleBreadthElement=document.getElementById("breadth")
@@ -39,6 +41,8 @@ return
 }
 })
 
+//rectangle area calculate
+
 document.getElementById("rectangle-btn").addEventListener("click",function(e){
     serial=serial+1
     const rectangleWidthElement=document.getElementById("width")
@@ -60,5 +64,18 @@ tr.innerHTML=`
 
 `
 textAreaElement.appendChild(tr)
+if (isNaN(rectangleWidthInput) || isNaN(rectangleLengthInput))
+{
+    alert("please enter number")
+    return
+}
+if(rectangleWidthInput=="" || rectangleLengthInput==""){
+alert("please fill all required field")
+return;
+}
+if(rectangleWidthInput<0 || rectangleLengthInput<0){
+alert("please enter positive number")
+return
+}
     
 })
