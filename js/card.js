@@ -7,9 +7,9 @@ const triangleBreadthElement=document.getElementById("breadth")
 const triangleBreadthInput=triangleBreadthElement.value
 const triangleHeightElement=document.getElementById("height")
 const triangleHeightInput=triangleHeightElement.value
-const triangleAreaCalculate=.5*parseFloat(triangleBreadthInput)*parseFloat(triangleHeightInput)
+const triangleAreaCalculate=(.5*parseFloat(triangleBreadthInput)*parseFloat(triangleHeightInput).toFixed(2))
 const triangleFormulaElement=document.getElementById("triangle-formula")
-const triangleArea=(parseFloat(triangleFormulaElement.innerText)).toFixed(2)
+const triangleArea=parseFloat(triangleFormulaElement.innerText)
 triangleFormulaElement.innerText=triangleAreaCalculate
 
 const contentTitle=document.getElementById("triangle").innerText
@@ -24,7 +24,19 @@ tr.innerHTML=`
 `
 textAreaElement.appendChild(tr)
 
-
+if (isNaN(triangleBreadthInput) || isNaN(triangleHeightInput))
+{
+    alert("please enter number")
+    return
+}
+if(triangleBreadthInput=="" || triangleHeightInput==""){
+alert("please fill all required field")
+return;
+}
+if(triangleBreadthInput<0 || triangleHeightInput<0){
+alert("please enter positive number")
+return
+}
 })
 
 document.getElementById("rectangle-btn").addEventListener("click",function(e){
