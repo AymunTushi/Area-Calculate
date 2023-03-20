@@ -1,10 +1,16 @@
+function areaCalculate(){
+    const breadthElement=document.getElementById("breadth")
+const breadthInput=breadthElement.value
+const heightElement=document.getElementById("height")
+const heightInput=heightElement.value
+}
 
 let serial=0
 document.getElementById("triangle-btn").addEventListener("click",function(e){
     serial=serial+1
 const triangleBreadthElement=document.getElementById("breadth")
 const triangleBreadthInput=triangleBreadthElement.value
-const breadthInput=parseInt(triangleBreadthInput)
+//const breadthInput=parseInt(triangleBreadthInput)
 const triangleHeightElement=document.getElementById("height")
 const triangleHeightInput=triangleHeightElement.value
 const triangleAreaCalculate=.5*parseFloat(triangleBreadthInput)*parseFloat(triangleHeightInput)
