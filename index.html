@@ -50,13 +50,13 @@
     </figure>
     <div class="card-body items-center text-center">
       <h2 class="card-title" id="rectangle">Rectangle</h2>
-      <p>Area (A)=w x l</p>
+      <p>Area (A)=<span id="rectangle-formula">w x l</span></p>
       <div class="flex w-25">
-      <input type="text" placeholder="w" size="8" ><span>cm</span>
-      <input type="text" placeholder="l" size="8"> <span>cm</span>
+      <input type="text" placeholder="w" size="8" id="width" ><span>cm</span>
+      <input type="text" placeholder="l" size="8" id="length"> <span>cm</span>
     </div>
       <div class="card-actions text-center pt-4">
-        <button class="btn btn-primary">Calculate</button>
+        <button class="btn btn-primary" id="rectangle-btn">Calculate</button>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@
     
     <h3 class="text-lg font-bold text-center">Area Calculation</h3>
    
-        <table class="table-w-full">
+        <table class="table-auto">
             <tbody id="container">
 
             </tbody>
