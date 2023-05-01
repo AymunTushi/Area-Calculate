@@ -1,5 +1,4 @@
 
-
 let serial=0
 
 //triangle area calculate
@@ -16,15 +15,11 @@ triangleFormulaElement.innerText=triangleAreaCalculate
 
 const contentTitle=document.getElementById("triangle").innerText
 
-const textAreaElement=document.getElementById("container")
-const tr=document.createElement("tr");
-tr.innerHTML=`
-<td>${serial}.</td>
-<td>${contentTitle}</td>
-<td>${triangleAreaCalculate}cm2</td>
+displayData(contentTitle,triangleAreaCalculate)
 
-`
-textAreaElement.appendChild(tr)
+
+
+// Error Handling
 
 if (isNaN(triangleBreadthInput) || isNaN(triangleHeightInput))
 {
@@ -41,6 +36,21 @@ return
 }
 })
 
+
+//Function to display Data
+
+function displayData(contentTitle,AreaCalculate){
+    const textAreaElement=document.getElementById("container")
+const tr=document.createElement("tr");
+tr.innerHTML=`
+<td>${serial}.</td>
+<td>${contentTitle}</td>
+<td>${AreaCalculate}cm2</td>
+
+`
+textAreaElement.appendChild(tr)
+}
+
 //rectangle area calculate
 
 document.getElementById("rectangle-btn").addEventListener("click",function(e){
@@ -55,20 +65,17 @@ document.getElementById("rectangle-btn").addEventListener("click",function(e){
     rectangleFormulaElement.innerText=rectangleAreaCalculate
     
     const contentTitle=document.getElementById("rectangle").innerText
-    const textAreaElement=document.getElementById("container")
-const tr=document.createElement("tr");
-tr.innerHTML=`
-<td>${serial}.</td>
-<td>${contentTitle}</td>
-<td>${rectangleAreaCalculate}cm2</td>
+    displayData(contentTitle,rectangleAreaCalculate)
 
-`
-textAreaElement.appendChild(tr)
+
+// Error Handling
+
 if (isNaN(rectangleWidthInput) || isNaN(rectangleLengthInput))
 {
     alert("please enter number")
     return
 }
+
 if(rectangleWidthInput=="" || rectangleLengthInput==""){
 alert("please fill all required field")
 return;

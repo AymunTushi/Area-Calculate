@@ -1,0 +1,5 @@
+1. Dynamically calculate area of geometric figure (rectangle,triangle)
+2. Used tailwind css for frint end design
+3. get and set value from/to dom element
+4. Error handling for input value
+5. event listener: click
